@@ -1,1 +1,3 @@
 example/.antlr/
+parser/.antlr/
+.vscode/
