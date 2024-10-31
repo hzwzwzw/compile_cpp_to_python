@@ -43,7 +43,8 @@ if __name__ == "__main__":
         "../example/test0.cpp",
         "../example/test1.cpp",
         "../example/test2.cpp",
-        "../example/test3.cpp"
+        "../example/test3.cpp",
+        "../example/test4.cpp"
     }
     for file_name in filename:
         proc(file_name)

@@ -1,0 +1,286 @@
+{
+    "type": "prog",
+    "children": [
+        {
+            "type": "preProc",
+            "children": [
+                {
+                    "text": "#include"
+                },
+                {
+                    "text": "<"
+                },
+                {
+                    "text": "iostream"
+                },
+                {
+                    "text": ">"
+                }
+            ]
+        },
+        {
+            "type": "preProc",
+            "children": [
+                {
+                    "text": "#include"
+                },
+                {
+                    "text": "<"
+                },
+                {
+                    "text": "cctype"
+                },
+                {
+                    "text": ">"
+                }
+            ]
+        },
+        {
+            "type": "preProc",
+            "children": [
+                {
+                    "text": "#include"
+                },
+                {
+                    "text": "<"
+                },
+                {
+                    "text": "cstdlib"
+                },
+                {
+                    "text": ">"
+                }
+            ]
+        },
+        {
+            "type": "preProc",
+            "children": [
+                {
+                    "text": "#include"
+                },
+                {
+                    "text": "<"
+                },
+                {
+                    "text": "cstring"
+                },
+                {
+                    "text": ">"
+                }
+            ]
+        },
+        {
+            "type": "globalStatement",
+            "children": [
+                {
+                    "type": "definition",
+                    "children": [
+                        {
+                            "type": "definitionConstant",
+                            "children": [
+                                {
+                                    "text": "const"
+                                },
+                                {
+                                    "type": "definitionVariable",
+                                    "children": [
+                                        {
+                                            "type": "variable",
+                                            "children": [
+                                                {
+                                                    "type": "type",
+                                                    "children": [
+                                                        {
+                                                            "type": "simpleType",
+                                                            "children": [
+                                                                {
+                                                                    "text": "int"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "variableName",
+                                                    "children": [
+                                                        {
+                                                            "type": "simpleVariable",
+                                                            "children": [
+                                                                {
+                                                                    "text": "MAX"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "="
+                                        },
+                                        {
+                                            "type": "expression",
+                                            "children": [
+                                                {
+                                                    "type": "typevalue",
+                                                    "children": [
+                                                        {
+                                                            "text": "100"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": ";"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "classStatement",
+            "children": [
+                {
+                    "text": "class"
+                },
+                {
+                    "text": "CharStack"
+                },
+                {
+                    "text": "{"
+                },
+                {
+                    "type": "classPermission",
+                    "children": [
+                        {
+                            "text": "public"
+                        },
+                        {
+                            "text": ":"
+                        }
+                    ]
+                },
+                {
+                    "type": "declaration",
+                    "children": [
+                        {
+                            "type": "declarationVariable",
+                            "children": [
+                                {
+                                    "type": "variable",
+                                    "children": [
+                                        {
+                                            "type": "type",
+                                            "children": [
+                                                {
+                                                    "type": "simpleType",
+                                                    "children": [
+                                                        {
+                                                            "text": "char"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "variableName",
+                                            "children": [
+                                                {
+                                                    "type": "arrayVariable",
+                                                    "children": [
+                                                        {
+                                                            "text": "data"
+                                                        },
+                                                        {
+                                                            "text": "["
+                                                        },
+                                                        {
+                                                            "type": "expression",
+                                                            "children": [
+                                                                {
+                                                                    "type": "variableName",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "simpleVariable",
+                                                                            "children": [
+                                                                                {
+                                                                                    "text": "MAX"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "text": "]"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": ";"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "declaration",
+                    "children": [
+                        {
+                            "type": "declarationVariable",
+                            "children": [
+                                {
+                                    "type": "variable",
+                                    "children": [
+                                        {
+                                            "type": "type",
+                                            "children": [
+                                                {
+                                                    "type": "simpleType",
+                                                    "children": [
+                                                        {
+                                                            "text": "int"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "variableName",
+                                            "children": [
+                                                {
+                                                    "type": "simpleVariable",
+                                                    "children": [
+                                                        {
+                                                            "text": "top"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": ";"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "}"
+                }
+            ]
+        }
+    ]
+}
