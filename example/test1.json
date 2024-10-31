@@ -1,0 +1,1229 @@
+{
+    "type": "prog",
+    "children": [
+        {
+            "type": "preProc",
+            "children": [
+                {
+                    "text": "#include"
+                },
+                {
+                    "text": "<"
+                },
+                {
+                    "text": "iostream"
+                },
+                {
+                    "text": ">"
+                }
+            ]
+        },
+        {
+            "type": "preProc",
+            "children": [
+                {
+                    "text": "#include"
+                },
+                {
+                    "text": "<"
+                },
+                {
+                    "text": "cstring"
+                },
+                {
+                    "text": ">"
+                }
+            ]
+        },
+        {
+            "type": "globalStatement",
+            "children": [
+                {
+                    "type": "definition",
+                    "children": [
+                        {
+                            "type": "definitionFunction",
+                            "children": [
+                                {
+                                    "type": "type",
+                                    "children": [
+                                        {
+                                            "type": "simpleType",
+                                            "children": [
+                                                {
+                                                    "text": "bool"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "functionName",
+                                    "children": [
+                                        {
+                                            "text": "isPalindrome"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "("
+                                },
+                                {
+                                    "text": "const"
+                                },
+                                {
+                                    "type": "variable",
+                                    "children": [
+                                        {
+                                            "type": "type",
+                                            "children": [
+                                                {
+                                                    "type": "simpleType",
+                                                    "children": [
+                                                        {
+                                                            "text": "char"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "variableName",
+                                            "children": [
+                                                {
+                                                    "type": "arrayVariable",
+                                                    "children": [
+                                                        {
+                                                            "text": "input"
+                                                        },
+                                                        {
+                                                            "text": "["
+                                                        },
+                                                        {
+                                                            "text": "]"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": ")"
+                                },
+                                {
+                                    "type": "block",
+                                    "children": [
+                                        {
+                                            "text": "{"
+                                        },
+                                        {
+                                            "type": "statement",
+                                            "children": [
+                                                {
+                                                    "type": "definition",
+                                                    "children": [
+                                                        {
+                                                            "type": "definitionVariable",
+                                                            "children": [
+                                                                {
+                                                                    "type": "variable",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "type",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "simpleType",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "int"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type": "variableName",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "simpleVariable",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "length"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "="
+                                                                },
+                                                                {
+                                                                    "type": "expression",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "call",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "variableName",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "simpleVariable",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "text": "strlen"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "text": "("
+                                                                                },
+                                                                                {
+                                                                                    "type": "expression",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "variableName",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "simpleVariable",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "text": "input"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "text": ")"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": ";"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "statement",
+                                            "children": [
+                                                {
+                                                    "text": "for"
+                                                },
+                                                {
+                                                    "text": "("
+                                                },
+                                                {
+                                                    "type": "forInit",
+                                                    "children": [
+                                                        {
+                                                            "type": "definitionVariable",
+                                                            "children": [
+                                                                {
+                                                                    "type": "variable",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "type",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "simpleType",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "int"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type": "variableName",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "simpleVariable",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "i"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "="
+                                                                },
+                                                                {
+                                                                    "type": "expression",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "typevalue",
+                                                                            "children": [
+                                                                                {
+                                                                                    "text": "0"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": ";"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "condition",
+                                                    "children": [
+                                                        {
+                                                            "type": "expression",
+                                                            "children": [
+                                                                {
+                                                                    "type": "expression",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "variableName",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "simpleVariable",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "i"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "<"
+                                                                },
+                                                                {
+                                                                    "type": "expression",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "expression",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "variableName",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "simpleVariable",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "text": "length"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "text": "/"
+                                                                        },
+                                                                        {
+                                                                            "type": "expression",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "typevalue",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "2"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": ";"
+                                                },
+                                                {
+                                                    "type": "forIter",
+                                                    "children": [
+                                                        {
+                                                            "type": "expression",
+                                                            "children": [
+                                                                {
+                                                                    "text": "++"
+                                                                },
+                                                                {
+                                                                    "type": "expression",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "variableName",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "simpleVariable",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "i"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": ")"
+                                                },
+                                                {
+                                                    "type": "block",
+                                                    "children": [
+                                                        {
+                                                            "text": "{"
+                                                        },
+                                                        {
+                                                            "type": "statement",
+                                                            "children": [
+                                                                {
+                                                                    "text": "if"
+                                                                },
+                                                                {
+                                                                    "text": "("
+                                                                },
+                                                                {
+                                                                    "type": "condition",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "expression",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "expression",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "variableName",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "arrayVariable",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "text": "input"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "text": "["
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "expression",
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "type": "variableName",
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "type": "simpleVariable",
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "text": "i"
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "text": "]"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "text": "!="
+                                                                                },
+                                                                                {
+                                                                                    "type": "expression",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "variableName",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "arrayVariable",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "text": "input"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "text": "["
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "expression",
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "type": "expression",
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "type": "expression",
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "type": "variableName",
+                                                                                                                                    "children": [
+                                                                                                                                        {
+                                                                                                                                            "type": "simpleVariable",
+                                                                                                                                            "children": [
+                                                                                                                                                {
+                                                                                                                                                    "text": "length"
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "text": "-"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "type": "expression",
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "type": "variableName",
+                                                                                                                                    "children": [
+                                                                                                                                        {
+                                                                                                                                            "type": "simpleVariable",
+                                                                                                                                            "children": [
+                                                                                                                                                {
+                                                                                                                                                    "text": "i"
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "text": "-"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "type": "expression",
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "type": "typevalue",
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "text": "1"
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "text": "]"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": ")"
+                                                                },
+                                                                {
+                                                                    "type": "block",
+                                                                    "children": [
+                                                                        {
+                                                                            "text": "{"
+                                                                        },
+                                                                        {
+                                                                            "type": "statement",
+                                                                            "children": [
+                                                                                {
+                                                                                    "text": "return"
+                                                                                },
+                                                                                {
+                                                                                    "type": "expression",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "variableName",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "simpleVariable",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "text": "false"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "text": ";"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "text": "}"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "text": "}"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "statement",
+                                            "children": [
+                                                {
+                                                    "text": "return"
+                                                },
+                                                {
+                                                    "type": "expression",
+                                                    "children": [
+                                                        {
+                                                            "type": "variableName",
+                                                            "children": [
+                                                                {
+                                                                    "type": "simpleVariable",
+                                                                    "children": [
+                                                                        {
+                                                                            "text": "true"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": ";"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "}"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "globalStatement",
+            "children": [
+                {
+                    "type": "definition",
+                    "children": [
+                        {
+                            "type": "definitionFunction",
+                            "children": [
+                                {
+                                    "type": "type",
+                                    "children": [
+                                        {
+                                            "type": "simpleType",
+                                            "children": [
+                                                {
+                                                    "text": "int"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "functionName",
+                                    "children": [
+                                        {
+                                            "text": "main"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "text": "("
+                                },
+                                {
+                                    "text": ")"
+                                },
+                                {
+                                    "type": "block",
+                                    "children": [
+                                        {
+                                            "text": "{"
+                                        },
+                                        {
+                                            "type": "statement",
+                                            "children": [
+                                                {
+                                                    "type": "declaration",
+                                                    "children": [
+                                                        {
+                                                            "type": "declarationVariable",
+                                                            "children": [
+                                                                {
+                                                                    "type": "variable",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "type",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "simpleType",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "char"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "type": "variableName",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "arrayVariable",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "input"
+                                                                                        },
+                                                                                        {
+                                                                                            "text": "["
+                                                                                        },
+                                                                                        {
+                                                                                            "type": "expression",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "typevalue",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "text": "100"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "text": "]"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": ";"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "statement",
+                                            "children": [
+                                                {
+                                                    "type": "expression",
+                                                    "children": [
+                                                        {
+                                                            "type": "expression",
+                                                            "children": [
+                                                                {
+                                                                    "type": "variableName",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "nameSpace",
+                                                                            "children": [
+                                                                                {
+                                                                                    "text": "std"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "text": "::"
+                                                                        },
+                                                                        {
+                                                                            "type": "simpleVariable",
+                                                                            "children": [
+                                                                                {
+                                                                                    "text": "cout"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "text": "<<"
+                                                        },
+                                                        {
+                                                            "type": "expression",
+                                                            "children": [
+                                                                {
+                                                                    "type": "typevalue",
+                                                                    "children": [
+                                                                        {
+                                                                            "text": "\"Enter a string: \""
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": ";"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "statement",
+                                            "children": [
+                                                {
+                                                    "type": "expression",
+                                                    "children": [
+                                                        {
+                                                            "type": "call",
+                                                            "children": [
+                                                                {
+                                                                    "type": "variableName",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "nameSpace",
+                                                                            "children": [
+                                                                                {
+                                                                                    "text": "std"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "text": "::"
+                                                                        },
+                                                                        {
+                                                                            "type": "parentName",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "simpleVariable",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "cin"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "text": "."
+                                                                        },
+                                                                        {
+                                                                            "type": "simpleVariable",
+                                                                            "children": [
+                                                                                {
+                                                                                    "text": "getline"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": "("
+                                                                },
+                                                                {
+                                                                    "type": "expression",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "variableName",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "simpleVariable",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "input"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": ","
+                                                                },
+                                                                {
+                                                                    "type": "expression",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "typevalue",
+                                                                            "children": [
+                                                                                {
+                                                                                    "text": "100"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": ")"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": ";"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "statement",
+                                            "children": [
+                                                {
+                                                    "text": "if"
+                                                },
+                                                {
+                                                    "text": "("
+                                                },
+                                                {
+                                                    "type": "condition",
+                                                    "children": [
+                                                        {
+                                                            "type": "expression",
+                                                            "children": [
+                                                                {
+                                                                    "type": "call",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "variableName",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "simpleVariable",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "text": "isPalindrome"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "text": "("
+                                                                        },
+                                                                        {
+                                                                            "type": "expression",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "variableName",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "simpleVariable",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "text": "input"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "text": ")"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": ")"
+                                                },
+                                                {
+                                                    "type": "block",
+                                                    "children": [
+                                                        {
+                                                            "text": "{"
+                                                        },
+                                                        {
+                                                            "type": "statement",
+                                                            "children": [
+                                                                {
+                                                                    "type": "expression",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "expression",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "expression",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "variableName",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "nameSpace",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "text": "std"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "text": "::"
+                                                                                                },
+                                                                                                {
+                                                                                                    "type": "simpleVariable",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "text": "cout"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "text": "<<"
+                                                                                },
+                                                                                {
+                                                                                    "type": "expression",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "typevalue",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "text": "\"True\""
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "text": "<<"
+                                                                        },
+                                                                        {
+                                                                            "type": "expression",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "variableName",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "nameSpace",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "text": "std"
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "text": "::"
+                                                                                        },
+                                                                                        {
+                                                                                            "type": "simpleVariable",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "text": "endl"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": ";"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "text": "}"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": "else"
+                                                },
+                                                {
+                                                    "type": "block",
+                                                    "children": [
+                                                        {
+                                                            "text": "{"
+                                                        },
+                                                        {
+                                                            "type": "statement",
+                                                            "children": [
+                                                                {
+                                                                    "type": "expression",
+                                                                    "children": [
+                                                                        {
+                                                                            "type": "expression",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "expression",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "variableName",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "nameSpace",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "text": "std"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "text": "::"
+                                                                                                },
+                                                                                                {
+                                                                                                    "type": "simpleVariable",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "text": "cout"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "text": "<<"
+                                                                                },
+                                                                                {
+                                                                                    "type": "expression",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "typevalue",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "text": "\"False\""
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "text": "<<"
+                                                                        },
+                                                                        {
+                                                                            "type": "expression",
+                                                                            "children": [
+                                                                                {
+                                                                                    "type": "variableName",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "type": "nameSpace",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "text": "std"
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "text": "::"
+                                                                                        },
+                                                                                        {
+                                                                                            "type": "simpleVariable",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "text": "endl"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "text": ";"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "text": "}"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "statement",
+                                            "children": [
+                                                {
+                                                    "text": "return"
+                                                },
+                                                {
+                                                    "type": "expression",
+                                                    "children": [
+                                                        {
+                                                            "type": "typevalue",
+                                                            "children": [
+                                                                {
+                                                                    "text": "0"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "text": ";"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "text": "}"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

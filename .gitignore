@@ -1,3 +1,4 @@
 example/.antlr/
 parser/.antlr/
 .vscode/
+parser/__pycache__/
