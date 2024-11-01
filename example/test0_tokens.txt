@@ -1,0 +1,23 @@
+INCLUDE: #include
+LESS: <
+NAME: iostream
+GREATER: >
+NAME: int
+NAME: main
+L_BRACKET: (
+R_BRACKET: )
+L_BRACE: {
+NAME: std
+DOUBLE_COLON: ::
+NAME: cout
+SHIFT_LEFT: <<
+STR: "Hello, World!"
+SHIFT_LEFT: <<
+NAME: std
+DOUBLE_COLON: ::
+NAME: endl
+SEMICOLON: ;
+NAME: return
+INT: 0
+SEMICOLON: ;
+R_BRACE: }

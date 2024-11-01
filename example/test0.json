@@ -156,11 +156,19 @@
                                             ]
                                         },
                                         {
+                                            "text": ""
+                                        },
+                                        {
                                             "type": "statement",
                                             "children": [
                                                 {
                                                     "text": "return"
-                                                },
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "statement",
+                                            "children": [
                                                 {
                                                     "type": "expression",
                                                     "children": [
