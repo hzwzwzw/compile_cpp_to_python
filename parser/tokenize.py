@@ -30,15 +30,18 @@ def proc(file_name):
 
 
 if __name__ == "__main__":
-    # file_name = input("Enter the file name to parse: ")
-    filename = {
-        # "C:\\Users\\23576\\Desktop\\汇编与编译原理\\final\\example\\test0.cpp"
-        "../example/test0.cpp",
-        "../example/test1.cpp",
-        "../example/test2.cpp",
-        "../example/test3.cpp",
-        "../example/test4.cpp"
-    }
-    for file_name in filename:
-        proc(file_name)
+    file_name = input("Enter the file name to parse (empty to autotest): ")
     
+    if file_name != "":
+        proc(file_name)
+    else:
+        filename = {
+            "../example/test0.cpp",
+            "../example/test1.cpp",
+            "../example/test2.cpp",
+            "../example/test3.cpp",
+            "../example/test4.cpp"
+        }
+        for file_name in filename:
+            proc(file_name)
+        

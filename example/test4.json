@@ -70,74 +70,71 @@
             ]
         },
         {
-            "text": ""
-        },
-        {
-            "type": "globalStatement",
-            "children": [
-                {
-                    "text": "const"
-                }
-            ]
-        },
-        {
             "type": "globalStatement",
             "children": [
                 {
                     "type": "definition",
                     "children": [
                         {
-                            "type": "definitionVariable",
+                            "type": "definitionConstant",
                             "children": [
                                 {
-                                    "type": "variable",
+                                    "text": "const"
+                                },
+                                {
+                                    "type": "definitionVariable",
                                     "children": [
                                         {
-                                            "type": "type",
+                                            "type": "variable",
                                             "children": [
                                                 {
-                                                    "type": "simpleType",
+                                                    "type": "type",
                                                     "children": [
                                                         {
-                                                            "text": "int"
+                                                            "type": "simpleType",
+                                                            "children": [
+                                                                {
+                                                                    "text": "int"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "variableName",
+                                                    "children": [
+                                                        {
+                                                            "type": "simpleVariable",
+                                                            "children": [
+                                                                {
+                                                                    "text": "MAX"
+                                                                }
+                                                            ]
                                                         }
                                                     ]
                                                 }
                                             ]
                                         },
                                         {
-                                            "type": "variableName",
+                                            "text": "="
+                                        },
+                                        {
+                                            "type": "expression",
                                             "children": [
                                                 {
-                                                    "type": "simpleVariable",
+                                                    "type": "typevalue",
                                                     "children": [
                                                         {
-                                                            "text": "MAX"
+                                                            "text": "100"
                                                         }
                                                     ]
                                                 }
                                             ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "text": "="
-                                },
-                                {
-                                    "type": "expression",
-                                    "children": [
+                                        },
                                         {
-                                            "type": "typevalue",
-                                            "children": [
-                                                {
-                                                    "text": "100"
-                                                }
-                                            ]
+                                            "text": ";"
                                         }
                                     ]
-                                },
-                                {
-                                    "text": ";"
                                 }
                             ]
                         }
@@ -146,44 +143,28 @@
             ]
         },
         {
-            "text": ""
-        },
-        {
-            "type": "globalStatement",
+            "type": "classStatement",
             "children": [
                 {
                     "text": "class"
-                }
-            ]
-        },
-        {
-            "type": "globalStatement",
-            "children": [
+                },
                 {
                     "text": "CharStack"
                 },
                 {
                     "text": "{"
-                }
-            ]
-        },
-        {
-            "text": ""
-        },
-        {
-            "type": "globalStatement",
-            "children": [
-                {
-                    "text": "public"
                 },
                 {
-                    "text": ":"
-                }
-            ]
-        },
-        {
-            "type": "globalStatement",
-            "children": [
+                    "type": "classPermission",
+                    "children": [
+                        {
+                            "text": "public"
+                        },
+                        {
+                            "text": ":"
+                        }
+                    ]
+                },
                 {
                     "type": "declaration",
                     "children": [
@@ -251,12 +232,7 @@
                             ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "type": "globalStatement",
-            "children": [
+                },
                 {
                     "type": "declaration",
                     "children": [
@@ -300,6 +276,9 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "text": "}"
                 }
             ]
         }

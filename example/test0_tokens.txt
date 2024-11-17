@@ -2,7 +2,7 @@ INCLUDE: #include
 LESS: <
 NAME: iostream
 GREATER: >
-NAME: int
+TYPE_INT: int
 NAME: main
 L_BRACKET: (
 R_BRACKET: )
@@ -17,7 +17,7 @@ NAME: std
 DOUBLE_COLON: ::
 NAME: endl
 SEMICOLON: ;
-NAME: return
+RETURN: return
 INT: 0
 SEMICOLON: ;
 R_BRACE: }

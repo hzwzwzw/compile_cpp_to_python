@@ -32,7 +32,7 @@ variable : type variableName;
 
 expression : expression (PLUS | MINUS) expression
           | expression (MULTIPLY | DIVIDE) expression
-          | expression (LESS | GREATER | LEQ | GEQ | NOT_EQUAL) expression
+          | expression (LESS | GREATER | LEQ | GEQ | EQUAL | NOT_EQUAL) expression
           | expression (DOUBLE_AND | DOUBLE_OR) expression
           | expression (AND | OR) expression
           | expression (SHIFT_LEFT | SHIFT_RIGHT) expression
@@ -56,7 +56,9 @@ statement : declaration
          | IF L_BRACKET condition R_BRACKET (statement | block) (ELSE (statement | block))?
          | WHILE L_BRACKET condition R_BRACKET (statement | block)
          | FOR L_BRACKET forInit condition? SEMICOLON forIter? R_BRACKET (statement | block)
-         | RETURN expression SEMICOLON;
+         | retstat;
+
+retstat : RETURN expression SEMICOLON;
 
 condition : expression;
 
@@ -91,16 +93,6 @@ functionName : (nameSpace DOUBLE_COLON)? (parentName DOT)* NAME;
 parentName: simpleVariable | arrayVariable | NAME (L_BRACKET (expression (COMMA expression)*)? R_BRACKET)?;
 
 nameSpace : NAME;
-
-NAME : [a-zA-Z_][a-zA-Z_0-9]*;
-
-INT : [0-9]+;
-
-FLOAT : [0-9]* '.' [0-9]+;
-
-CHAR : '\'' (. | '\\' .+?) '\'';
-
-STR : QUOTE .+? QUOTE;
 
 BOOL : 'true' | 'false';
 
@@ -164,8 +156,6 @@ DOUBLE_COLON : '::';
 
 SEMICOLON : ';';
 
-ASSIGN  : '=';
-
 PLUS : '+';
 
 MINUS : '-';
@@ -194,6 +184,8 @@ GEQ : '>=';
 
 EQUAL : '==';
 
+ASSIGN  : '=';
+
 NOT_EQUAL : '!=';
 
 DOUBLE_AND : '&&';
@@ -209,6 +201,16 @@ QUESTION : '?';
 SHIFT_LEFT : '<<';
 
 SHIFT_RIGHT : '>>';
+
+NAME : [a-zA-Z_][a-zA-Z_0-9]*;
+
+INT : [0-9]+;
+
+FLOAT : [0-9]* '.' [0-9]+;
+
+CHAR : '\'' (. | '\\' .+?) '\'';
+
+STR : QUOTE .+? QUOTE;
 
 Skip : [ \t\r\n]+ -> skip;
 

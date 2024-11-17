@@ -156,34 +156,31 @@
                                             ]
                                         },
                                         {
-                                            "text": ""
-                                        },
-                                        {
                                             "type": "statement",
                                             "children": [
                                                 {
-                                                    "text": "return"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "statement",
-                                            "children": [
-                                                {
-                                                    "type": "expression",
+                                                    "type": "retstat",
                                                     "children": [
                                                         {
-                                                            "type": "typevalue",
+                                                            "text": "return"
+                                                        },
+                                                        {
+                                                            "type": "expression",
                                                             "children": [
                                                                 {
-                                                                    "text": "0"
+                                                                    "type": "typevalue",
+                                                                    "children": [
+                                                                        {
+                                                                            "text": "0"
+                                                                        }
+                                                                    ]
                                                                 }
                                                             ]
+                                                        },
+                                                        {
+                                                            "text": ";"
                                                         }
                                                     ]
-                                                },
-                                                {
-                                                    "text": ";"
                                                 }
                                             ]
                                         },
