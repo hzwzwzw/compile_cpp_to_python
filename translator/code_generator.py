@@ -4,14 +4,12 @@ class CodeGenerator:
     def generate(self, ast):
         code = []
         for node in ast:
-            if node["node"] == "PalindromeCheck":
-                code.append(f"print({self.generate_palindrome_check(node['input'])})")
-            elif node["node"] == "SortList":
-                code.append(f"print(sorted([{', '.join(node['items'])}]))")
-            elif node["node"] == "KMPMatch":
-                code.append(f"print(self.kmp_search('{node['text']}', '{node['pattern']}'))")
-            elif node["node"] == "ArithmeticExpression":
-                code.append(f"print({node['expression']})")
+            if node["node"] == "FunctionDefinition":
+                code.append(f"def {node['name']}():")
+                for statement in node["block"]:
+                    if statement["node"] == "FunctionCall":
+                        if(statement["name"] == "printf"):
+                            code.append(f"    print({statement['arguments'][0]['value']})")
         return "\n".join(code)
 
     def generate_palindrome_check(self, input_string):
