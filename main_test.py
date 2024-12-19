@@ -35,4 +35,4 @@ def main():
 
 if __name__ == "__main__":
     # main()
-    translator.translator.main("example/test0.cpp")
+    translator.translator.main("example/test1.cpp")

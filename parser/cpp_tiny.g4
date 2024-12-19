@@ -28,7 +28,7 @@ classStatement : CLASS NAME L_BRACE (declaration | definition | classPermission)
 
 classPermission : (PERMISSON_PUBLIC | PERMISSON_PROTECTED | PERMISSON_PRIVATE) COLON;
 
-variable : type variableName;
+variable : type MULTIPLY?variableName(L_SQUARE_BRACKET expression? R_SQUARE_BRACKET)*;
 
 expression : expression (PLUS | MINUS) expression
           | expression (MULTIPLY | DIVIDE) expression
@@ -51,12 +51,12 @@ block : L_BRACE statement* R_BRACE;
 statement : declaration
          | definition
          | assignment SEMICOLON
-         | expression SEMICOLON
          | call SEMICOLON
          | IF L_BRACKET condition R_BRACKET (statement | block) (ELSE (statement | block))?
          | WHILE L_BRACKET condition R_BRACKET (statement | block)
          | FOR L_BRACKET forInit condition? SEMICOLON forIter? R_BRACKET (statement | block)
-         | retstat;
+         | retstat
+         | expression SEMICOLON;
 
 retstat : RETURN expression SEMICOLON;
 

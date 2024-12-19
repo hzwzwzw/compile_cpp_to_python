@@ -58,13 +58,13 @@ def main(input_file):
 
     # Code Generation
     print("\n4. Generating Python Code...")
-    try:
-        code_generator = CodeGenerator()
-        python_code = code_generator.generate(ast)
-        print("   Code generation completed")
-    except Exception as e:
-        print(f"   Error during code generation: {str(e)}")
-        return
+    # try:
+    code_generator = CodeGenerator()
+    python_code = code_generator.generate(ast)
+    print("   Code generation completed")
+    # except Exception as e:
+    #     print(f"   Error during code generation: {str(e)}")
+    #     return
 
     # Output Python Code
     print("\n5. Writing Output File...")
