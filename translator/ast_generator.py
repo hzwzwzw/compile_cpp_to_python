@@ -50,18 +50,29 @@ class ASTGenerator(cpp_tinyVisitor):
         print(f"\nDebug: Visiting definition variable")
         if ctx is None:
             return None
-        
-        # Get variable type and name
+
         var = self.visit(ctx.variable())
         if var is None:
             return None
-        
-        # Get the expression/value
+
         value = None
         if ctx.expression():
             value = self.visit(ctx.expression())
         elif ctx.arrayValue():
-            value = self.visit(ctx.arrayValue())
+            print(f"\nDebug: Visiting array value: {ctx.getText()}")
+            values = []
+            if ctx.arrayValue().children:
+                for child in ctx.arrayValue().children:
+                    if child.getText() not in ["{", "}", ","]:
+                        visited = self.visit(child)
+                        if isinstance(visited, dict) and "value" in visited:
+                            values.append(visited["value"])
+                        else:
+                            values.append(visited)
+            value = {
+                "node": "Expression",
+                "value": values
+            }
         elif ctx.new():
             value = self.visit(ctx.new())
 
@@ -72,19 +83,21 @@ class ASTGenerator(cpp_tinyVisitor):
             "value": value
         }
 
-
     def visitDefinitionFunction(self, ctx):
         print(f"\nDebug: Visiting definition function")
         if ctx is None:
             return None
         returntype = ctx.type_().getText() if ctx.type_() else ""
         functionname = ctx.functionName().getText() if ctx.functionName() else ""
-        # TODO: arguments
         variables = []
         i = 0
         var = ctx.variable(i)
         while var:
-            variables.append(var.variableName().getText())
+            var_type = var.type_().getText() if var.type_() else ""
+            var_name = var.variableName().getText() if var.variableName() else ""
+            if var_name.startswith("&"):
+                var_name = var_name[1:]
+            variables.append(var_name)
             i += 1
             var = ctx.variable(i)
         block = self.visit(ctx.block())
@@ -143,10 +156,27 @@ class ASTGenerator(cpp_tinyVisitor):
             return self.visit(ctx.retstat())
         elif ctx.expression():
             print("Debug: expression")
-            return self.visit(ctx.expression())
+            expr = self.visit(ctx.expression())
+            if "=" in expr:
+                return {
+                    "node": "Assignment",
+                    "expression": expr
+                }
+            else:
+                return {
+                    "node": "Expression",
+                    "value": expr
+                }
         elif ctx.definition():
             print("Debug: definition")
             return self.visit(ctx.definition())
+        elif ctx.assignment():
+            print("Debug: assignment")
+            return {
+                "node": "Assignment",
+                "target": ctx.assignment().getChild(0).getText(),
+                "value": self.visit(ctx.assignment().getChild(2))
+            }
         else:
             print("Debug: unknown")
             print(type(ctx.getChild(0)))
