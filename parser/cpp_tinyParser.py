@@ -368,14 +368,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_prog
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterProg" ):
-                listener.enterProg(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitProg" ):
-                listener.exitProg(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitProg" ):
                 return visitor.visitProg(self)
@@ -460,14 +452,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_preProc
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPreProc" ):
-                listener.enterPreProc(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPreProc" ):
-                listener.exitPreProc(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitPreProc" ):
@@ -559,14 +543,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_globalStatement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGlobalStatement" ):
-                listener.enterGlobalStatement(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGlobalStatement" ):
-                listener.exitGlobalStatement(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitGlobalStatement" ):
                 return visitor.visitGlobalStatement(self)
@@ -627,14 +603,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_declaration
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDeclaration" ):
-                listener.enterDeclaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDeclaration" ):
-                listener.exitDeclaration(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitDeclaration" ):
@@ -698,14 +666,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_declarationConstant
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDeclarationConstant" ):
-                listener.enterDeclarationConstant(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDeclarationConstant" ):
-                listener.exitDeclarationConstant(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitDeclarationConstant" ):
                 return visitor.visitDeclarationConstant(self)
@@ -750,14 +710,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_declarationVariable
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDeclarationVariable" ):
-                listener.enterDeclarationVariable(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDeclarationVariable" ):
-                listener.exitDeclarationVariable(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitDeclarationVariable" ):
@@ -838,14 +790,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_declarationFunction
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDeclarationFunction" ):
-                listener.enterDeclarationFunction(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDeclarationFunction" ):
-                listener.exitDeclarationFunction(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitDeclarationFunction" ):
@@ -956,14 +900,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_definition
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDefinition" ):
-                listener.enterDefinition(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDefinition" ):
-                listener.exitDefinition(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitDefinition" ):
                 return visitor.visitDefinition(self)
@@ -1026,14 +962,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_definitionConstant
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDefinitionConstant" ):
-                listener.enterDefinitionConstant(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDefinitionConstant" ):
-                listener.exitDefinitionConstant(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitDefinitionConstant" ):
                 return visitor.visitDefinitionConstant(self)
@@ -1093,14 +1021,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_definitionVariable
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDefinitionVariable" ):
-                listener.enterDefinitionVariable(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDefinitionVariable" ):
-                listener.exitDefinitionVariable(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitDefinitionVariable" ):
@@ -1197,14 +1117,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_definitionFunction
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDefinitionFunction" ):
-                listener.enterDefinitionFunction(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDefinitionFunction" ):
-                listener.exitDefinitionFunction(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitDefinitionFunction" ):
@@ -1320,14 +1232,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_classStatement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterClassStatement" ):
-                listener.enterClassStatement(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitClassStatement" ):
-                listener.exitClassStatement(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitClassStatement" ):
                 return visitor.visitClassStatement(self)
@@ -1410,14 +1314,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_classPermission
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterClassPermission" ):
-                listener.enterClassPermission(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitClassPermission" ):
-                listener.exitClassPermission(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitClassPermission" ):
                 return visitor.visitClassPermission(self)
@@ -1469,14 +1365,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_variable
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVariable" ):
-                listener.enterVariable(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVariable" ):
-                listener.exitVariable(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitVariable" ):
@@ -1609,14 +1497,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_expression
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpression" ):
-                listener.enterExpression(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpression" ):
-                listener.exitExpression(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitExpression" ):
@@ -1891,14 +1771,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_block
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterBlock" ):
-                listener.enterBlock(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitBlock" ):
-                listener.exitBlock(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitBlock" ):
                 return visitor.visitBlock(self)
@@ -2018,14 +1890,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_statement
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStatement" ):
-                listener.enterStatement(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStatement" ):
-                listener.exitStatement(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitStatement" ):
@@ -2235,14 +2099,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_retstat
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterRetstat" ):
-                listener.enterRetstat(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitRetstat" ):
-                listener.exitRetstat(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitRetstat" ):
                 return visitor.visitRetstat(self)
@@ -2286,14 +2142,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_condition
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCondition" ):
-                listener.enterCondition(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCondition" ):
-                listener.exitCondition(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitCondition" ):
@@ -2345,14 +2193,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_forInit
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterForInit" ):
-                listener.enterForInit(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitForInit" ):
-                listener.exitForInit(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitForInit" ):
@@ -2419,14 +2259,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_forIter
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterForIter" ):
-                listener.enterForIter(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitForIter" ):
-                listener.exitForIter(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitForIter" ):
@@ -2495,14 +2327,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_assignment
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAssignment" ):
-                listener.enterAssignment(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAssignment" ):
-                listener.exitAssignment(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitAssignment" ):
@@ -2587,14 +2411,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_call
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterCall" ):
-                listener.enterCall(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitCall" ):
-                listener.exitCall(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitCall" ):
                 return visitor.visitCall(self)
@@ -2676,14 +2492,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_type
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterType" ):
-                listener.enterType(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitType" ):
-                listener.exitType(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitType" ):
                 return visitor.visitType(self)
@@ -2754,14 +2562,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_simpleType
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSimpleType" ):
-                listener.enterSimpleType(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSimpleType" ):
-                listener.exitSimpleType(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitSimpleType" ):
                 return visitor.visitSimpleType(self)
@@ -2817,14 +2617,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_arrayType
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterArrayType" ):
-                listener.enterArrayType(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitArrayType" ):
-                listener.exitArrayType(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitArrayType" ):
@@ -2889,14 +2681,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_typevalue
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTypevalue" ):
-                listener.enterTypevalue(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTypevalue" ):
-                listener.exitTypevalue(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitTypevalue" ):
@@ -2973,14 +2757,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_variableName
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVariableName" ):
-                listener.enterVariableName(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVariableName" ):
-                listener.exitVariableName(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitVariableName" ):
@@ -3070,14 +2846,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_simpleVariable
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSimpleVariable" ):
-                listener.enterSimpleVariable(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSimpleVariable" ):
-                listener.exitSimpleVariable(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitSimpleVariable" ):
                 return visitor.visitSimpleVariable(self)
@@ -3135,14 +2903,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_arrayVariable
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterArrayVariable" ):
-                listener.enterArrayVariable(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitArrayVariable" ):
-                listener.exitArrayVariable(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitArrayVariable" ):
@@ -3227,14 +2987,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_arrayValue
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterArrayValue" ):
-                listener.enterArrayValue(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitArrayValue" ):
-                listener.exitArrayValue(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitArrayValue" ):
@@ -3325,14 +3077,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_new
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNew" ):
-                listener.enterNew(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNew" ):
-                listener.exitNew(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitNew" ):
                 return visitor.visitNew(self)
@@ -3406,14 +3150,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_functionName
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFunctionName" ):
-                listener.enterFunctionName(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFunctionName" ):
-                listener.exitFunctionName(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitFunctionName" ):
@@ -3504,14 +3240,6 @@ class cpp_tinyParser ( Parser ):
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_parentName
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterParentName" ):
-                listener.enterParentName(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitParentName" ):
-                listener.exitParentName(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitParentName" ):
                 return visitor.visitParentName(self)
@@ -3600,14 +3328,6 @@ class cpp_tinyParser ( Parser ):
 
         def getRuleIndex(self):
             return cpp_tinyParser.RULE_nameSpace
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterNameSpace" ):
-                listener.enterNameSpace(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitNameSpace" ):
-                listener.exitNameSpace(self)
 
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitNameSpace" ):
