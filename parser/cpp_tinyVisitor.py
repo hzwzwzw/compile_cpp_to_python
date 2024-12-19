@@ -1,4 +1,4 @@
-# Generated from ./parser/cpp_tiny.g4 by ANTLR 4.13.2
+# Generated from ./cpp_tiny.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
     from .cpp_tinyParser import cpp_tinyParser
@@ -13,77 +13,101 @@ class cpp_tinyVisitor(ParseTreeVisitor):
     def visitProg(self, ctx:cpp_tinyParser.ProgContext):
         return self.visitChildren(ctx)
 
+
     # Visit a parse tree produced by cpp_tinyParser#preProc.
     def visitPreProc(self, ctx:cpp_tinyParser.PreProcContext):
         return self.visitChildren(ctx)
+
 
     # Visit a parse tree produced by cpp_tinyParser#globalStatement.
     def visitGlobalStatement(self, ctx:cpp_tinyParser.GlobalStatementContext):
         return self.visitChildren(ctx)
 
+
     # Visit a parse tree produced by cpp_tinyParser#declaration.
     def visitDeclaration(self, ctx:cpp_tinyParser.DeclarationContext):
         return self.visitChildren(ctx)
+
 
     # Visit a parse tree produced by cpp_tinyParser#declarationConstant.
     def visitDeclarationConstant(self, ctx:cpp_tinyParser.DeclarationConstantContext):
         return self.visitChildren(ctx)
 
+
     # Visit a parse tree produced by cpp_tinyParser#declarationVariable.
     def visitDeclarationVariable(self, ctx:cpp_tinyParser.DeclarationVariableContext):
         return self.visitChildren(ctx)
+
 
     # Visit a parse tree produced by cpp_tinyParser#declarationFunction.
     def visitDeclarationFunction(self, ctx:cpp_tinyParser.DeclarationFunctionContext):
         return self.visitChildren(ctx)
 
+
     # Visit a parse tree produced by cpp_tinyParser#definition.
     def visitDefinition(self, ctx:cpp_tinyParser.DefinitionContext):
         return self.visitChildren(ctx)
+
 
     # Visit a parse tree produced by cpp_tinyParser#definitionConstant.
     def visitDefinitionConstant(self, ctx:cpp_tinyParser.DefinitionConstantContext):
         return self.visitChildren(ctx)
 
+
     # Visit a parse tree produced by cpp_tinyParser#definitionVariable.
     def visitDefinitionVariable(self, ctx:cpp_tinyParser.DefinitionVariableContext):
         return self.visitChildren(ctx)
+
 
     # Visit a parse tree produced by cpp_tinyParser#definitionFunction.
     def visitDefinitionFunction(self, ctx:cpp_tinyParser.DefinitionFunctionContext):
         return self.visitChildren(ctx)
 
+
     # Visit a parse tree produced by cpp_tinyParser#classStatement.
     def visitClassStatement(self, ctx:cpp_tinyParser.ClassStatementContext):
         return self.visitChildren(ctx)
+
 
     # Visit a parse tree produced by cpp_tinyParser#classPermission.
     def visitClassPermission(self, ctx:cpp_tinyParser.ClassPermissionContext):
         return self.visitChildren(ctx)
 
+
     # Visit a parse tree produced by cpp_tinyParser#variable.
     def visitVariable(self, ctx:cpp_tinyParser.VariableContext):
         return self.visitChildren(ctx)
+
 
     # Visit a parse tree produced by cpp_tinyParser#expression.
     def visitExpression(self, ctx:cpp_tinyParser.ExpressionContext):
         return self.visitChildren(ctx)
 
+
     # Visit a parse tree produced by cpp_tinyParser#block.
     def visitBlock(self, ctx:cpp_tinyParser.BlockContext):
         return self.visitChildren(ctx)
+
 
     # Visit a parse tree produced by cpp_tinyParser#statement.
     def visitStatement(self, ctx:cpp_tinyParser.StatementContext):
         return self.visitChildren(ctx)
 
+
+    # Visit a parse tree produced by cpp_tinyParser#retstat.
+    def visitRetstat(self, ctx:cpp_tinyParser.RetstatContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by cpp_tinyParser#condition.
     def visitCondition(self, ctx:cpp_tinyParser.ConditionContext):
         return self.visitChildren(ctx)
 
+
     # Visit a parse tree produced by cpp_tinyParser#forInit.
     def visitForInit(self, ctx:cpp_tinyParser.ForInitContext):
         return self.visitChildren(ctx)
+
 
     # Visit a parse tree produced by cpp_tinyParser#forIter.
     def visitForIter(self, ctx:cpp_tinyParser.ForIterContext):

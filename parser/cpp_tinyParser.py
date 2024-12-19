@@ -376,6 +376,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitProg" ):
                 listener.exitProg(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProg" ):
+                return visitor.visitProg(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -462,6 +468,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPreProc" ):
                 listener.exitPreProc(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPreProc" ):
+                return visitor.visitPreProc(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -555,6 +567,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitGlobalStatement" ):
                 listener.exitGlobalStatement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGlobalStatement" ):
+                return visitor.visitGlobalStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -617,6 +635,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeclaration" ):
                 listener.exitDeclaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclaration" ):
+                return visitor.visitDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -682,6 +706,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitDeclarationConstant" ):
                 listener.exitDeclarationConstant(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarationConstant" ):
+                return visitor.visitDeclarationConstant(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -728,6 +758,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeclarationVariable" ):
                 listener.exitDeclarationVariable(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarationVariable" ):
+                return visitor.visitDeclarationVariable(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -810,6 +846,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeclarationFunction" ):
                 listener.exitDeclarationFunction(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarationFunction" ):
+                return visitor.visitDeclarationFunction(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -922,6 +964,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitDefinition" ):
                 listener.exitDefinition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefinition" ):
+                return visitor.visitDefinition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -986,6 +1034,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitDefinitionConstant" ):
                 listener.exitDefinitionConstant(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefinitionConstant" ):
+                return visitor.visitDefinitionConstant(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1047,6 +1101,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDefinitionVariable" ):
                 listener.exitDefinitionVariable(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefinitionVariable" ):
+                return visitor.visitDefinitionVariable(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1145,6 +1205,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDefinitionFunction" ):
                 listener.exitDefinitionFunction(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefinitionFunction" ):
+                return visitor.visitDefinitionFunction(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1262,6 +1328,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitClassStatement" ):
                 listener.exitClassStatement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitClassStatement" ):
+                return visitor.visitClassStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1346,6 +1418,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitClassPermission" ):
                 listener.exitClassPermission(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitClassPermission" ):
+                return visitor.visitClassPermission(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1399,6 +1477,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVariable" ):
                 listener.exitVariable(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVariable" ):
+                return visitor.visitVariable(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1533,6 +1617,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExpression" ):
                 listener.exitExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpression" ):
+                return visitor.visitExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1809,6 +1899,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitBlock" ):
                 listener.exitBlock(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock" ):
+                return visitor.visitBlock(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1930,6 +2026,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStatement" ):
                 listener.exitStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatement" ):
+                return visitor.visitStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2141,6 +2243,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitRetstat" ):
                 listener.exitRetstat(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRetstat" ):
+                return visitor.visitRetstat(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2186,6 +2294,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCondition" ):
                 listener.exitCondition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCondition" ):
+                return visitor.visitCondition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2239,6 +2353,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitForInit" ):
                 listener.exitForInit(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForInit" ):
+                return visitor.visitForInit(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2307,6 +2427,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitForIter" ):
                 listener.exitForIter(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForIter" ):
+                return visitor.visitForIter(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2377,6 +2503,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAssignment" ):
                 listener.exitAssignment(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssignment" ):
+                return visitor.visitAssignment(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2463,6 +2595,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitCall" ):
                 listener.exitCall(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCall" ):
+                return visitor.visitCall(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2546,6 +2684,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitType" ):
                 listener.exitType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitType" ):
+                return visitor.visitType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2618,6 +2762,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitSimpleType" ):
                 listener.exitSimpleType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimpleType" ):
+                return visitor.visitSimpleType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2675,6 +2825,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArrayType" ):
                 listener.exitArrayType(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArrayType" ):
+                return visitor.visitArrayType(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2741,6 +2897,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypevalue" ):
                 listener.exitTypevalue(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypevalue" ):
+                return visitor.visitTypevalue(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2819,6 +2981,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVariableName" ):
                 listener.exitVariableName(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVariableName" ):
+                return visitor.visitVariableName(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2910,6 +3078,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitSimpleVariable" ):
                 listener.exitSimpleVariable(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimpleVariable" ):
+                return visitor.visitSimpleVariable(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2969,6 +3143,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArrayVariable" ):
                 listener.exitArrayVariable(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArrayVariable" ):
+                return visitor.visitArrayVariable(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3055,6 +3235,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArrayValue" ):
                 listener.exitArrayValue(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArrayValue" ):
+                return visitor.visitArrayValue(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3147,6 +3333,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitNew" ):
                 listener.exitNew(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNew" ):
+                return visitor.visitNew(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3222,6 +3414,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunctionName" ):
                 listener.exitFunctionName(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionName" ):
+                return visitor.visitFunctionName(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3314,6 +3512,12 @@ class cpp_tinyParser ( Parser ):
             if hasattr( listener, "exitParentName" ):
                 listener.exitParentName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParentName" ):
+                return visitor.visitParentName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3404,6 +3608,12 @@ class cpp_tinyParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNameSpace" ):
                 listener.exitNameSpace(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNameSpace" ):
+                return visitor.visitNameSpace(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 

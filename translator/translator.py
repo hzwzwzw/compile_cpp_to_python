@@ -1,5 +1,9 @@
 # main driver file that integrates everything
 
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from antlr4 import FileStream, CommonTokenStream
 from parser.cpp_tinyLexer import cpp_tinyLexer
 from parser.cpp_tinyParser import cpp_tinyParser
