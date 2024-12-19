@@ -40,6 +40,9 @@ class ASTGenerator(cpp_tinyVisitor):
         if ctx.definitionVariable():
             print("Debug: Found variable definition")
             return self.visit(ctx.definitionVariable())
+        elif ctx.definitionFunction():
+            print("Debug: Found function definition")
+            return self.visit(ctx.definitionFunction())
         return None
 
     def visitDefinitionVariable(self, ctx):
@@ -68,6 +71,59 @@ class ASTGenerator(cpp_tinyVisitor):
             "value": value
         }
 
+
+    def visitDefinitionFunction(self, ctx):
+        print(f"\nDebug: Visiting definition function")
+        if ctx is None:
+            return None
+        returntype = ctx.type_().getText() if ctx.type_() else ""
+        functionname = ctx.functionName().getText() if ctx.functionName() else ""
+        # TODO: arguments
+        block = self.visit(ctx.block())
+        return {
+            "node": "FunctionDefinition",
+            "type": returntype,
+            "name": functionname,
+            "block": block
+        }
+    
+    def visitBlock(self, ctx):
+        print(f"\nDebug: Visiting block")
+        if ctx is None:
+            return None
+        nodes = []
+        for i, child in enumerate(ctx.children):
+            print(f"\nDebug: Visiting child {i} of type {type(child)}")
+            print(f"Debug: Child text: {child.getText()}")
+            result = self.visit(child)
+            print(f"Debug: Result: {result}")
+            if result is not None:
+                nodes.append(result)
+        print(f"\nDebug: Block node generated {len(nodes)} nodes: {nodes}")
+        return nodes if nodes else None
+    
+    def visitStatement(self, ctx):
+        print(f"\nDebug: Visiting statement")
+        if ctx is None:
+            return None
+        return self.visit(ctx.getChild(0))
+    
+    def visitCall(self, ctx):
+        print(f"\nDebug: Visiting call")
+        if ctx is None:
+            return None
+        functionname = ctx.variableName().getText() if ctx.variableName() else ctx.NAME().getText()
+        arguments = []
+        for i in range(1, ctx.getChildCount() - 1):
+            arg = self.visit(ctx.getChild(i))
+            if arg is not None:
+                arguments.append(arg)
+        return {
+            "node": "FunctionCall",
+            "name": functionname,
+            "arguments": arguments
+        }
+
     def visitVariable(self, ctx):
         if ctx is None:
             return None
@@ -94,9 +150,18 @@ class ASTGenerator(cpp_tinyVisitor):
             return {"node": "Variable", "name": ctx.variableName().getText()}
         
         # Literal values
-        if ctx.INT():
-            return {"node": "Literal", "type": "int", "value": ctx.INT().getText()}
-        elif ctx.FLOAT():
-            return {"node": "Literal", "type": "float", "value": ctx.FLOAT().getText()}
+        if ctx.typevalue():
+            return self.visit(ctx.typevalue())
         
         return self.visitChildren(ctx)
+
+    def visitTypevalue(self, ctx):
+        if ctx is None:
+            return None
+        if ctx.INT():
+            return {"node": "Literal", "type": "int", "value": int(ctx.INT().getText())}
+        if ctx.FLOAT():
+            return {"node": "Literal", "type": "float", "value": float(ctx.FLOAT().getText())}
+        if ctx.STR():
+            return {"node": "Literal", "type": "string", "value": ctx.STR().getText()}
+        return None

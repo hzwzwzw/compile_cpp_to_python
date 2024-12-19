@@ -1,6 +1,8 @@
 import os
 import subprocess
 
+import translator.translator
+
 # List of test C++ files
 test_files = [
     "example/test0.cpp",
@@ -32,4 +34,5 @@ def main():
             print(f"Test file {test_file} does not exist.")
 
 if __name__ == "__main__":
-    main()
+    # main()
+    translator.translator.main("example/test0.cpp")
