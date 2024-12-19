@@ -1,11 +1,11 @@
 #include <iostream>
 
 // Function to swap two integer values
-void swap(int &a, int &b)
+void swap(int arr[], int a, int b)
 {
-    int temp = a;
-    a = b;
-    b = temp;
+    int temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
 }
 
 // Partition function that chooses a pivot and partitions the array
@@ -20,10 +20,10 @@ int partition(int arr[], int low, int high)
         if (arr[j] <= pivot)
         {
             ++i;                  // Increment index of smaller element
-            swap(arr[i], arr[j]); // Swap current element with the element at index i
+            swap(arr, i, j); // Swap current element with the element at index i
         }
     }
-    swap(arr[i + 1], arr[high]); // Swap the pivot element with the element at index i+1
+    swap(arr, i + 1, high); // Swap the pivot element with the element at index i+1
     return (i + 1);
 }
 
@@ -46,9 +46,9 @@ void printArray(int arr[], int size)
 {
     for (int i = 0; i < size; ++i)
     {
-        std::cout << arr[i] << " ";
+        printf("%d ", arr[i]); 
     }
-    std::cout << std::endl;
+    printf("\n");
 }
 
 int main()
@@ -56,12 +56,12 @@ int main()
     int arr[] = {10, 7, 8, 9, 1, 5};      // Sample array
     int n = sizeof(arr) / sizeof(arr[0]); // Calculate the number of elements in the array
 
-    std::cout << "Original array: ";
+    printf("Original array: ");
     printArray(arr, n);
 
     quickSort(arr, 0, n - 1); // Sort the array using QuickSort
 
-    std::cout << "Sorted array: ";
+    printf("Sorted array: ");
     printArray(arr, n);
 
     return 0;
